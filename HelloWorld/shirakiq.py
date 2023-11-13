@@ -31,8 +31,8 @@ for row in dataframe_to_rows(df, index=None, header=True):
 for row in dataframe_to_rows(df, index=None, header=True):
     ws2.append(row)
 
-#↓横軸の名前
-#ws["A1"] = "Frequency[GHz]"
+#↓横軸の名前a
+#ws["A1"] = "Frequency[GHz]"a
 
 #↓行の数を収得
 colum_kazu = ws.max_column 
