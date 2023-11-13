@@ -27,12 +27,13 @@ else:
     else:
         header_row = 0
     df = pd.read_table(file_path, header=header_row)
-print(df)
+
+""" print(df) """
 
 """ df = df[0].str.split('\t', expand=True)
 print(df)
  """
-
+head = df.columns
 
 for column in df.columns:
     df[column] = df[column].apply(lambda x: float(x) if isinstance(x, str) and 'E' in x else x)
@@ -75,8 +76,8 @@ line.set_categories(categories)
 #↓ラベルの設定
 #x_name = input("x軸の名前は何にします?")
 #y_name = input("y軸の名前は何にしますか?")
-line.x_axis.title = "Frequency[GHz]"
-line.y_axis.title = "Sparameter[dB]"
+line.x_axis.title = "head[0]"
+line.y_axis.title = "head[1]"
 
 #↓シートにグラフを追加i
 
